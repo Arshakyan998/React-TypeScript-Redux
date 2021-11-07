@@ -1,0 +1,80 @@
+.main_large{
+         
+ position: fixed;
+ top:0;
+ left: 0;
+ width: 100%;
+ height:100% ;
+ background: rgba(2, 2, 21, 0.4);
+ z-index: 77;
+ padding: 7px;
+ display: flex;
+ justify-content: center;
+ margin: auto;  
+ overflow: hidden;
+ flex-wrap: nowrap;
+
+&_slider{
+        padding: 15px;
+       overflow: hidden;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       position: absolute;
+       width: 100%;
+       flex-direction: row;
+       margin: 15px auto;
+ 
+
+  &_img_block{
+display: flex;
+flex: 1;
+justify-content: space-between;
+min-width: 100%;
+height: 20%;
+ transition: all ease 0.5s ;
+ position: relative;
+ padding-left: 25px;
+
+  }
+          
+}
+.left_slide{
+   position: absolute;
+   left: 39px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #fff;
+   width: 200px;
+   bottom: 0px;
+   cursor: pointer;
+   height: 55px;
+   border-radius: 15px;
+   transition: all ease 0.5s ;
+   &:hover{
+    background: blue;
+ transition: all ease 0.5s ;
+ }
+}
+.right_slide{
+  position: absolute;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  width: 200px;
+  height: 55px;
+  border-radius: 15px;
+  bottom: 0px;
+  cursor: pointer;
+  transition: all ease 0.5s ;
+ 
+  &:hover{
+     background: blue;
+  transition: all ease 0.5s ;
+  }
+}
+
+}

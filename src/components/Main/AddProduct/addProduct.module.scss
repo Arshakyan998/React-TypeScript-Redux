@@ -1,0 +1,16 @@
+.add_product_block{
+        position: absolute;
+        top: 25px;
+        left: -8px;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        width: 55px;
+        height: 55px;
+        background: orange;
+        border-radius: 5px;
+        cursor: pointer;
+        >div{
+                margin: auto;
+        }
+}

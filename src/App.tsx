@@ -1,24 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Header } from "./components/Header/Header";
 
-function App() {
+import { useDispatchTS } from "./usersHooks/useDispatchTS";
+import { Routes } from "./Routes/Route";
+import {
+  useHistory,
+  useLocation,
+ 
+} from "react-router";
+import { LargeImg } from "./components/Main/LargeImg/LargeImg";
+import SaveProgress from "./components/saveProgres/SaveProgress";
+
+function App(): React.ReactElement {
+  const { initalACtion, changeCurrentCategory } = useDispatchTS();
+
+  const location = useLocation();
+
+  const path = location.pathname.split("/");
+
+
+  
+
+  const history = useHistory();
+  React.useEffect(() => {
+    initalACtion();
+    history.push("/");
+
+    if (localStorage.getItem("path")) {
+      const currentPath=+path[path.length - 1]
+      if(+path[path.length - 1]){
+        history.push(localStorage.getItem("path")!);
+      changeCurrentCategory(+currentPath);
+      }
+      
+    }
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes />
+      <LargeImg />
+      <SaveProgress />  
     </div>
   );
 }

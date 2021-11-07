@@ -1,0 +1,27 @@
+.main{
+        display: flex;
+         
+
+        &_content{
+                width: 180px;
+                                      position: relative;
+
+                padding: 7px;
+                background: #fff!important;
+                border-radius: 5px;
+                margin: 10px; 
+                div{
+                        height: 90%;
+                }
+ 
+                &_description{
+                        display: flex;
+                        justify-content: space-between;
+                        div:not(:first-child){
+                                font-weight: bold;
+                        }
+                }
+
+
+        }
+}

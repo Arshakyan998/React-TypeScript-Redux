@@ -1,0 +1,141 @@
+$backGround: #ffffff;
+$borderRadius: 5px;
+
+.header_nav {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &_gender {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+      padding: 5px;
+      margin-right: 10px;
+      width: 50px;
+      height: 30px;
+      background: $backGround;
+      border-radius: $borderRadius;
+      text-align: center;
+      cursor: pointer;
+    }
+    > div:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &_content {
+    width: 150px;
+    height: 80px;
+    background: $backGround;
+    display: flex;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    flex-direction: column;
+    margin: 5px 5px !important; 
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+
+    &:hover .showAddAndHideBlock{
+      visibility: visible;
+      transition: all 0.5s ease-in;
+      opacity:  1;
+    }
+
+    img {
+      text-align: center;
+      margin: auto;
+    }
+
+    &_catname {
+      color: #2e2e2e;
+      display: block;
+    }
+    &_center {
+      margin: auto;
+      height: 80px !important;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px;
+    }
+  }
+  &_add {
+    width: 40px;
+    background: $backGround;
+    text-align: center;
+    margin-left: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $borderRadius;
+    position: relative;
+    cursor: pointer;
+
+    &_cart {
+      position: absolute;
+      top: 85px;
+      right: 0px;
+      width: 301px;
+      padding: 10px;
+      height: 360px;
+      background: #fff;
+      border-radius: 5px;
+      z-index: 5;
+
+      &_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        input[type="text"] {
+          width: 100%;
+          outline: none;
+          border: none;
+          border-bottom: 1px solid gray;
+        }
+        input[type="file"] {
+          visibility: hidden;
+        }
+
+        &_img_block {
+          width: 100%;
+          height: 110px;
+          cursor: pointer;
+          background: #d3d3d3;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 5px;
+
+     
+        }
+      }
+    }
+    &_hide{
+            visibility: hidden;
+    }
+  }
+}
+
+.showAddAndHideBlock{
+     position: relative;
+
+   display: flex;
+  justify-content: space-between;
+
+  opacity:  0;
+  transition: all 0.3s ease-in;
+}
+
